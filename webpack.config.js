@@ -1,6 +1,7 @@
 const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
@@ -9,7 +10,6 @@ module.exports = {
     entry: {
         bundle: path.resolve(__dirname, 'src/index.ts'),
     },
-    // entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: '[name].js',
@@ -42,27 +42,32 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
-            {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource',
-            },
         ],
     },
     resolve: {
         extensions: ['.ts', '.js'],
     },
     plugins: [
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: 'assets',
+                    to: 'assets',
+                    noErrorOnMissing: true,
+                },
+            ],
+        }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.html',
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'catalog.html',
-        //     template: './catalog.html',
-        // }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'cart.html',
-        //     template: './cart.html',
-        // }),
+        new HtmlWebpackPlugin({
+            filename: 'catalog.html',
+            template: 'src/catalog.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'cart.html',
+            template: 'src/cart.html',
+        }),
     ],
 }

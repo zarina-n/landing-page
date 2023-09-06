@@ -1,3 +1,4 @@
+import './styles/main.scss'
 import { productsList } from './data/products'
 import { Product } from './types/types'
 
