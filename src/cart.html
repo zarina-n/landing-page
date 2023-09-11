@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Корзина</title>
+        <title>Cart</title>
         <link
             rel="shortcut icon"
             href="./src/img/cart-title-icon.svg"
@@ -45,10 +45,14 @@
                     </svg>
                 </a>
 
-                <input placeholder="Поиск" class="header_input" type="search" />
+                <input
+                    placeholder="Search"
+                    class="header_input"
+                    type="search"
+                />
                 <nav class="header_navigation">
-                    <a class="nav_link" href="catalog.html">Каталог</a>
-                    <a class="nav_link" href="cart.html">Корзина</a>
+                    <a class="nav_link" href="catalog.html">Catalog</a>
+                    <a class="nav_link" href="cart.html">Cart</a>
                 </nav>
                 <div class="menu_mobile">
                     <a class="search_mobile" href="#"
@@ -157,15 +161,15 @@
                 </div>
             </header>
             <section class="title_box">
-                <h1 class="title">Корзина</h1>
+                <h1 class="title">Cart</h1>
             </section>
         </div>
 
         <div class="cart center">
             <div class="cart_content">
                 <div class="cart_content_top">
-                    <p class="cart_text">Товар</p>
-                    <p class="cart_text">К-во</p>
+                    <p class="cart_text">Product</p>
+                    <p class="cart_text">Quantity</p>
                 </div>
                 <div class="cart_item">
                     <div class="cart_item_info">
@@ -173,22 +177,24 @@
                             <a class="cart_img" href="#"
                                 ><img
                                     src="./src/img/cart_1.jpg"
-                                    alt="Стол MENU"
+                                    alt="Table MENU"
                             /></a>
                             <div class="cart_item-box-2">
                                 <a href="#">
-                                    <h3 class="cart_product-name">Стол MENU</h3>
+                                    <h3 class="cart_product-name">
+                                        Table MENU
+                                    </h3>
                                 </a>
                                 <p class="cart_product-text">
-                                    Для того чтобы трапезничать было приятно,
-                                    необходим правильный обеденный стол.
+                                    In order to have a pleasant meal, you need
+                                    the right dining table.In order to have a
+                                    pleasant meal, you need the right dining
+                                    table.
                                 </p>
-                                <span class="cart_product-price"
-                                    >34 000 руб.</span
-                                >
+                                <span class="cart_product-price">34 000</span>
                                 <div class="cart_link-box">
-                                    <a class="cart_link" href="#">Избранные</a>
-                                    <a class="cart_link" href="#">Удалить</a>
+                                    <a class="cart_link" href="#">Favorites</a>
+                                    <a class="cart_link" href="#">Remove</a>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +202,7 @@
                             <input
                                 class="cart_quantity"
                                 type="number"
-                                name="qauntity"
+                                name="quantity"
                                 min="1"
                                 value="1"
                             />
@@ -209,24 +215,23 @@
                             <a class="cart_img" href="#"
                                 ><img
                                     src="./src/img/cart_2.jpg"
-                                    alt="Диван NASTAN"
+                                    alt="Sofa NASTAN"
                             /></a>
                             <div class="cart_item-box-2">
                                 <a href="#">
                                     <h3 class="cart_product-name">
-                                        Диван NASTAN
+                                        Sofa NASTAN
                                     </h3>
                                 </a>
                                 <p class="cart_product-text">
-                                    Модель отличается простотой линий и форм,
-                                    отсутствием броского декора.
+                                    The model is distinguished by the simplicity
+                                    of its lines and shapes and the absence of
+                                    flashy decor.
                                 </p>
-                                <span class="cart_product-price"
-                                    >80 000 руб.</span
-                                >
+                                <span class="cart_product-price">80 000</span>
                                 <div class="cart_link-box">
-                                    <a class="cart_link" href="#">Избранные</a>
-                                    <a class="cart_link" href="#">Удалить</a>
+                                    <a class="cart_link" href="#">Favorites</a>
+                                    <a class="cart_link" href="#">Remove</a>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +239,7 @@
                             <input
                                 class="cart_quantity"
                                 type="number"
-                                name="qauntity"
+                                name="quantity"
                                 min="1"
                                 value="1"
                             />
@@ -242,23 +247,21 @@
                     </div>
                 </div>
                 <div class="cart_button-box">
-                    <button class="cart_button" type="reset">
-                        Очистить корзину
-                    </button>
+                    <button class="cart_button" type="reset">Empty cart</button>
                     <button class="cart_button cart_button_tablet">
-                        Продолжить покупки
+                        Continue shopping
                     </button>
                 </div>
             </div>
             <div class="form">
-                <h3 class="form_heading">Оформление заказа</h3>
+                <h3 class="form_heading">Place an order</h3>
                 <form class="cart_info" action="#">
                     <div class="form_input-box">
                         <input
                             class="form_input"
                             type="text"
                             name="username"
-                            placeholder="Имя Фамилия"
+                            placeholder="Full name"
                         />
                         <input
                             class="form_input"
@@ -270,13 +273,13 @@
                             class="form_input"
                             type="text"
                             name="useraddress"
-                            placeholder="Адрес доставки"
+                            placeholder="Shipping address"
                         />
                     </div>
                     <div class="submit">
-                        <p class="form_text">Итого: 128 000 руб.</p>
+                        <p class="form_text">Total: 128,000</p>
                         <button class="form_button" type="submit">
-                            Оформить заказ
+                            Checkout
                         </button>
                     </div>
                 </form>
@@ -284,7 +287,7 @@
         </div>
 
         <div class="product-box product-box_cart center">
-            <h2 class="heading">Специальные предложения</h2>
+            <h2 class="heading">Special offers</h2>
             <div class="product-content"></div>
         </div>
 
@@ -306,13 +309,13 @@
             <div class="footer_content">
                 <div class="footer_info">
                     <nav class="footer_item">
-                        <h4 class="footer_heading">Меню</h4>
-                        <a href="index.html" class="footer_link">Главная</a>
-                        <a href="catalog.html" class="footer_link">Каталог</a>
-                        <a href="cart.html" class="footer_link">Корзина</a>
+                        <h4 class="footer_heading">Menu</h4>
+                        <a href="index.html" class="footer_link">Home</a>
+                        <a href="catalog.html" class="footer_link">Catalog</a>
+                        <a href="cart.html" class="footer_link">Cart</a>
                     </nav>
                     <div class="footer_item">
-                        <h4 class="footer_heading">Контакты</h4>
+                        <h4 class="footer_heading">Contacts</h4>
                         <a class="footer_link" href="tel:+79088008080"
                             >+7 908 800 80 80
                         </a>
@@ -363,15 +366,13 @@
                     </div>
                 </div>
                 <form class="footer_form" action="#">
-                    <p class="footer_text">
-                        Получайте наши новости и обновления
-                    </p>
+                    <p class="footer_text">Get our news and updates</p>
                     <input
                         placeholder="Email Address"
                         class="email"
                         type="email"
                     />
-                    <button class="email_button">Подписаться</button>
+                    <button class="email_button">Subscribe</button>
                 </form>
             </div>
         </footer>

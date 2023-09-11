@@ -1,6 +1,7 @@
 import './styles/main.scss'
 import { productsList } from './data/products'
 import { Product } from './types/types'
+// import Search from './assets/svg/search.svg'
 
 const productContent = document.querySelector(
     '.product-content',
@@ -19,14 +20,12 @@ const getItems = (productBox: Element, products: Product[]) => {
             productItem.classList.add('product')
 
             const productImage = document.createElement('img')
-            productImage.src = `./assets/${product.img}`
+            productImage.src = `${product.img}`
             productImage.classList.add('product-img')
 
             const productName = document.createElement('div')
             productName.classList.add('product-name')
             productName.textContent = product.name
-
-            console.log(productName.textContent)
 
             const productDescription = document.createElement('p')
             productDescription.classList.add('product-text')
@@ -48,7 +47,7 @@ const getItems = (productBox: Element, products: Product[]) => {
                 )
                 productSalePrice.textContent =
                     product.salePrice?.toString() ||
-                    "We'll get back with updated pruce to you later"
+                    "We'll get back with updated price to you later"
             }
 
             productPriceBox.append(productPrice)
@@ -66,3 +65,7 @@ const getItems = (productBox: Element, products: Product[]) => {
 
 getItems(productContent, specialOffers)
 getItems(productBoxCatalog, catalogItems)
+
+const searchLink = document.querySelector('.search_mobile') as HTMLLinkElement
+
+// searchLink.append(search)

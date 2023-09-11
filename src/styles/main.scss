@@ -265,7 +265,6 @@ body {
     flex-direction: column;
     transition: all 0.3s;
     position: relative;
-    padding: 5px;
     border-radius: 5px;
 }
 
@@ -293,6 +292,16 @@ svg.cart_icon {
 
 .product:hover .product_icons {
     display: flex;
+}
+
+.product:hover {
+    .product-name,
+    .product-text,
+    .product-price_box {
+        transition: 0.4s;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 .heading {
@@ -347,8 +356,12 @@ svg.cart_icon {
     color: #888888;
 }
 
+.product-img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .link-box {
-    margin-bottom: 64px;
     margin-top: 39px;
 }
 
@@ -377,6 +390,7 @@ svg.cart_icon {
     background: #f7f6f6;
     padding-top: 32px;
     padding-bottom: 40px;
+    margin-top: 64px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -467,7 +481,6 @@ svg.logo_bottom {
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    color: #c4c4c4;
     background: $color-text;
     border: 1px solid #c4c4c4;
     box-sizing: border-box;
@@ -476,6 +489,10 @@ svg.logo_bottom {
     height: 46px;
     padding-left: 25px;
     padding-right: 25px;
+
+    &::placeholder {
+        color: #c4c4c4;
+    }
 
     &:focus {
         outline-color: black;
